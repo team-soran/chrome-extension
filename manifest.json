@@ -1,0 +1,14 @@
+
+{
+  "manifest_version": 2,
+
+  "name": "소란",
+  "description": "소란, 음악을 즐기는 또 하나의 방법",
+  "version": "0.0.1",
+  "icons": {
+    "16": "icon16.png",
+    "48": "icon48.png",
+    "128": "icon128.png"
+  }
+}
+
