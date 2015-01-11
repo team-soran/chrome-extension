@@ -1,14 +1,43 @@
-
 {
   "manifest_version": 2,
-
   "name": "소란",
   "description": "소란, 음악을 즐기는 또 하나의 방법",
-  "version": "0.0.1",
+  "version": "0.5",
   "icons": {
     "16": "icon16.png",
     "48": "icon48.png",
     "128": "icon128.png"
-  }
-}
+  },
 
+  "browser_action": {
+    "default_icon": "icon16.png"
+  }
+
+  /*
+
+  "background": {
+    "page": "background.html"
+  },
+
+  "permissions": [
+    "tabs",
+    "cookies",
+    "http://bugs.co.kr/*",
+    "http://*.naver.com/*"
+  ],
+
+  "content_scripts": [
+    {
+      "matches": [
+        "http://music.naver.com/*",
+        "http://player.music.naver.com/*",
+        "http://music.bugs.co.kr/*",
+        "http://bugs.co.kr/*",
+        "http://*.bugs.co.kr/*"
+      ],
+      "js": ["jquery.js","contentScript.js"],
+      "run_at": "document_end"
+    }
+  ]
+  */
+}
