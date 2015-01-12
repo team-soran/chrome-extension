@@ -9,9 +9,36 @@
     "128": "icon128.png"
   },
 
+  "permissions": [
+    "tabs",
+    "cookies",
+    "http://bugs.co.kr/*",
+    "http://*.naver.com/*"
+  ],
+
   "browser_action": {
     "default_icon": "icon16.png"
-  }
+  },
+
+  "content_scripts": [
+    {
+      "matches": [
+        "http://music.naver.com/*",
+        "http://player.music.naver.com/*",
+        "http://music.bugs.co.kr/*",
+        "http://bugs.co.kr/*",
+        "http://*.bugs.co.kr/*"
+      ],
+
+      "js": [
+        "bower_components/jquery/dist/jquery.min.js",
+        "content_script.js"
+      ],
+
+      "run_at": "document_end"
+    }
+  ]
+}
 
   /*
 
@@ -40,4 +67,3 @@
     }
   ]
   */
-}

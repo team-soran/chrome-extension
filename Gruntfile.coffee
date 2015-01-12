@@ -9,7 +9,9 @@ module.exports = (grunt) ->
       content:
         files:
           'content_script.js': [
+            'var.coffee'
             'content/util.coffee'
+            'content/main.coffee'
           ]
         options:
           join: true
@@ -28,13 +30,10 @@ module.exports = (grunt) ->
     watch:
       scripts:
         files: file_paths
-        tasks: ['coffee:content', 'coffee:all']
+        tasks: ['coffee:content']
         options:
           delay: 0
 
   # Load grunt-contrib-*
   grunt.loadNpmTasks 'grunt-contrib-watch'
   grunt.loadNpmTasks 'grunt-contrib-coffee'
-
-  # Register tasks
-  grunt.registerTask 'livew', ['']
